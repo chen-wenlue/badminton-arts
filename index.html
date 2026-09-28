@@ -1,583 +1,636 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upcycled Shuttlecock Art | Transforming Used Badminton Balls into Figurines</title>
-    <!-- Google Fonts & Font Awesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-color: #0d9488;
-            --primary-hover: #0f766e;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --shadow: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03);
-            --radius: 16px;
-        }
+<link href="[https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+<link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    :root {
+        --primary-color: #0d9488;
+        --primary-hover: #0f766e;
+        --mid-autumn-accent: #d97706; /* 中秋金黄色调 */
+        --bg-color: #f8fafc;
+        --card-bg: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --shadow: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03);
+        --radius: 16px;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        /* Hero Section */
-        header {
-            background: linear-gradient(135deg, #0f766e 0%, #111827 100%);
-            color: white;
-            text-align: center;
-            padding: 90px 20px 70px;
-        }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+    }
 
-        header .badge {
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.15);
-            padding: 6px 18px;
-            border-radius: 50px;
-            font-size: 0.88rem;
-            backdrop-filter: blur(5px);
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-        }
+    /* Hero Section */
+    header {
+        background: linear-gradient(135deg, #0f766e 0%, #111827 100%);
+        color: white;
+        text-align: center;
+        padding: 90px 20px 70px;
+    }
 
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
+    header .badge {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 6px 18px;
+        border-radius: 50px;
+        font-size: 0.88rem;
+        backdrop-filter: blur(5px);
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+    }
 
-        header p {
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            color: #cbd5e1;
-            font-weight: 300;
-        }
+    header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
 
-        /* Container */
-        .container {
-            max-width: 1150px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
+    header p {
+        font-size: 1.15rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        color: #cbd5e1;
+        font-weight: 300;
+    }
 
-        /* Section Title */
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+    /* Container */
+    .container {
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 60px 20px;
+    }
 
-        .section-title h2 {
-            font-size: 2.1rem;
-            color: var(--text-main);
-            position: relative;
-            display: inline-block;
-        }
+    /* Section Title */
+    .section-title {
+        text-align: center;
+        margin-bottom: 45px;
+    }
 
-        .section-title h2::after {
-            content: '';
-            display: block;
-            width: 60%;
-            height: 4px;
-            background: var(--primary-color);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
+    .section-title h2 {
+        font-size: 2.1rem;
+        color: var(--text-main);
+        position: relative;
+        display: inline-block;
+    }
 
-        .section-title p {
-            color: var(--text-muted);
-            margin-top: 8px;
-            font-size: 0.98rem;
-        }
+    .section-title h2::after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 4px;
+        background: var(--primary-color);
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
 
-        /* Grid Layouts */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin-bottom: 60px;
-        }
+    .section-title p {
+        color: var(--text-muted);
+        margin-top: 8px;
+        font-size: 0.98rem;
+    }
 
-        .grid-4 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 60px;
-        }
+    /* Mid-Autumn Section Accent */
+    .card-tag.mid-autumn {
+        color: var(--mid-autumn-accent);
+    }
 
-        /* Cards */
-        .card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .mid-autumn-section {
+        background: linear-gradient(135deg, #fffbe3 0%, #fef3c7 100%);
+        border: 2px solid #fde68a;
+        border-radius: var(--radius);
+        padding: 40px 25px;
+        margin-bottom: 60px;
+        box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.15);
+    }
 
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
-        }
+    .mid-autumn-section .section-title h2 {
+        color: #78350f;
+    }
 
-        .card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
+    .mid-autumn-section .section-title h2::after {
+        background: var(--mid-autumn-accent);
+    }
 
-        .card-body {
-            padding: 22px;
-        }
+    .mid-autumn-section .section-title p {
+        color: #92400e;
+    }
 
-        .card-tag {
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 6px;
-        }
+    /* Grid Layouts */
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+        margin-bottom: 60px;
+    }
 
-        .card-body h3 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            color: var(--text-main);
-        }
+    .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 60px;
+    }
 
-        .card-body p {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-        }
+    /* Cards */
+    .card {
+        background: var(--card-bg);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        /* Feature Card (012.jpg) */
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card-body {
+        padding: 22px;
+    }
+
+    .card-tag {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+    }
+
+    .card-body h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        color: var(--text-main);
+    }
+
+    .card-body p {
+        font-size: 0.92rem;
+        color: var(--text-muted);
+    }
+
+    /* Feature Card (012.jpg) */
+    .feature-card {
+        background: var(--card-bg);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        margin-bottom: 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .feature-card img {
+        width: 100%;
+        height: 100%;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    .feature-info {
+        padding: 40px;
+    }
+
+    .feature-info h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: var(--text-main);
+    }
+
+    .feature-info p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    /* Gallery Overlay Grid */
+    .gallery-item {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        aspect-ratio: 4/3;
+        background-color: #e2e8f0;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+    }
+
+    .gallery-overlay h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .gallery-overlay p {
+        font-size: 0.85rem;
+        color: #e2e8f0;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+        border: 1px solid #e2e8f0;
+        border-radius: var(--radius);
+        padding: 60px 30px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        max-width: 750px;
+        margin: 40px auto 0;
+    }
+
+    .contact-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+
+    .contact-section p {
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        font-size: 1rem;
+    }
+
+    .contact-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 14px 36px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+    }
+
+    .contact-btn:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(13, 148, 136, 0.4);
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 35px 20px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-top: 60px;
+        border-top: 1px solid #e2e8f0;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
         .feature-card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            margin-bottom: 70px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
+            grid-template-columns: 1fr;
         }
-
         .feature-card img {
-            width: 100%;
-            height: 100%;
-            max-height: 500px;
-            object-fit: cover;
+            height: 350px;
         }
+    }
 
-        .feature-info {
-            padding: 40px;
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 2rem;
         }
-
-        .feature-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: var(--text-main);
+        .container {
+            padding: 40px 15px;
         }
-
-        .feature-info p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        /* Gallery Overlay Grid */
-        .gallery-item {
-            position: relative;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            aspect-ratio: 4/3;
-            background-color: #e2e8f0;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 20px;
-            color: white;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .gallery-overlay p {
-            font-size: 0.85rem;
-            color: #e2e8f0;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-            border: 1px solid #e2e8f0;
-            border-radius: var(--radius);
-            padding: 60px 30px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            max-width: 750px;
-            margin: 40px auto 0;
-        }
-
-        .contact-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-        }
-
-        .contact-section p {
-            color: var(--text-muted);
-            margin-bottom: 28px;
-            font-size: 1rem;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 14px 36px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
-        }
-
-        .contact-btn:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(13, 148, 136, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 35px 20px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-top: 60px;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        /* Responsive */
-        @media (max-width: 850px) {
-            .feature-card {
-                grid-template-columns: 1fr;
-            }
-            .feature-card img {
-                height: 350px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            .container {
-                padding: 40px 15px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
-    <!-- Header / Hero Section -->
-    <header>
-        <div class="badge"><i class="fa-solid fa-recycle"></i> Eco-Friendly & Creative Upcycling</div>
-        <h1>Upcycled Badminton Shuttlecock Art</h1>
-        <p>From energetic moments on the court to creative handmade crafts. Giving damaged shuttlecocks a colorful second life as pop-culture figurines, ornaments, and glowing lights.</p>
-    </header>
+<header>
+    <div class="badge"><i class="fa-solid fa-recycle"></i> Eco-Friendly & Creative Upcycling</div>
+    <h1>Upcycled Badminton Shuttlecock Art</h1>
+    <p>From energetic moments on the court to creative handmade crafts. Giving damaged shuttlecocks a colorful second life as pop-culture figurines, ornaments, and glowing lights.</p>
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Phase 1: From Court to Craft -->
-        <section>
-            <div class="section-title">
-                <h2>01. The Origin</h2>
-                <p>It all starts on the badminton court with every smash and rally.</p>
-            </div>
+    
+    <section class="mid-autumn-section">
+        <div class="section-title">
+            <h2><i class="fa-solid fa-moon"></i> Mid-Autumn Festival Special Edition</h2>
+            <p>🥮 中秋佳节限定：将旧羽毛球结合发光灯效、玉兔与传统文创元素打造的节日特辑。</p>
+        </div>
 
-            <div class="grid-3">
-                <div class="card">
-                    <img src="022.jpg" alt="Smashing on Badminton Court">
-                    <div class="card-body">
-                        <div class="card-tag">Court Action</div>
-                        <h3>Action on the Court</h3>
-                        <p>High-energy badminton rallies mean lots of worn-out shuttlecocks that would otherwise be thrown away.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="024.jpg" alt="Playing Badminton">
-                    <div class="card-body">
-                        <div class="card-tag">Passion & Energy</div>
-                        <h3>Every Match Counts</h3>
-                        <p>Playing badminton regularly provides a continuous supply of discarded shuttlecocks waiting for a new purpose.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="016.jpg" alt="Collection of Shuttlecocks">
-                    <div class="card-body">
-                        <div class="card-tag">Recycling Inspiration</div>
-                        <h3>Collecting Used Materials</h3>
-                        <p>Gathering discarded shuttlecocks after games, sorting them for feather trimming and base repurposing.</p>
-                    </div>
+        <div class="grid-3" style="margin-bottom: 0;">
+            <div class="card">
+                <img src="mid-autumn-01.jpg" alt="Mid-Autumn Craft 1">
+                <div class="card-body">
+                    <div class="card-tag mid-autumn"><i class="fa-solid fa-star"></i> 中秋特辑 · 玉兔发光灯</div>
+                    <h3>Jade Rabbit Lantern</h3>
+                    <p>羽毛球底座改造的可爱发光玉兔，内置暖黄光微型 LED，兼具环保与节日氛围。</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Phase 2: DIY Crafting Process -->
-        <section>
-            <div class="section-title">
-                <h2>02. The Crafting Process</h2>
-                <p>Step-by-step transformation using simple tools and pure creativity.</p>
-            </div>
-
-            <div class="grid-3">
-                <div class="card">
-                    <img src="027.jpg" alt="Trimmed Feather Pieces">
-                    <div class="card-body">
-                        <div class="card-tag">Step 1</div>
-                        <h3>Sorting Feather Pieces</h3>
-                        <p>Plucking damaged feathers and keeping intact tips for delicate crafts like light skirts and dresses.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="001.jpg" alt="Tools for Assembly">
-                    <div class="card-body">
-                        <div class="card-tag">Step 2</div>
-                        <h3>Weaving & Binding</h3>
-                        <p>Using pliers and colorful nylon cords to tightly wrap the shuttlecock frame into smooth, vibrant skirts.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="025.jpg" alt="Gradient Wrapped Bases">
-                    <div class="card-body">
-                        <div class="card-tag">Step 3</div>
-                        <h3>Rainbow Thread Wrapping</h3>
-                        <p>Wrapping bases with neon gradient threads to prepare for character painting or standalone ornaments.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="005.jpg" alt="Hand Painting">
-                    <div class="card-body">
-                        <div class="card-tag">Step 4</div>
-                        <h3>Hand-Painting Facial Details</h3>
-                        <p>Using fine paint pens to detail superhero masks, cute eyes, and iconic expressions onto cork heads.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="023.jpg" alt="Beaded Feather Pendant">
-                    <div class="card-body">
-                        <div class="card-tag">Step 5</div>
-                        <h3>Beaded Collar Assembly</h3>
-                        <p>Threading pastel beads around the upper neck to create elegant feather skirts for hanging pendants.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="006.jpg" alt="Glowing LED Shuttlecock">
-                    <div class="card-body">
-                        <div class="card-tag">Step 6</div>
-                        <h3>Illuminating the Craft</h3>
-                        <p>Installing internal LED modules into feather structures to turn shuttlecocks into glowing night-light ornaments.</p>
-                    </div>
+            <div class="card">
+                <img src="mid-autumn-02.jpg" alt="Mid-Autumn Craft 2">
+                <div class="card-body">
+                    <div class="card-tag mid-autumn"><i class="fa-solid fa-star"></i> 中秋特辑 · 赏月人偶</div>
+                    <h3>Moon Festival Figurines</h3>
+                    <p>结合传统服饰造型编织的羽毛人偶，搭配月饼与桂花元素摆盘。</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Feature Spotlight: Master Cork Display Board -->
-        <section>
-            <div class="feature-card">
-                <img src="012.jpg" alt="Full Figurine Collection on Cork Board">
-                <div class="feature-info">
-                    <h3>The Master Collection</h3>
-                    <p>After hours of trimming, weaving, and painting, dozens of custom recycled characters come to life! From Marvel superheroes and Minions to Winnie the Pooh, Doraemon, pandas, and custom tassels—all displayed together on a cork board.</p>
+            <div class="card">
+                <img src="mid-autumn-03.jpg" alt="Mid-Autumn Craft 3">
+                <div class="card-body">
+                    <div class="card-tag mid-autumn"><i class="fa-solid fa-star"></i> 中秋特辑 · 节日软木展板</div>
+                    <h3>Festive Cork Board Display</h3>
+                    <p>将中秋系列作品集中展示在软木板上，搭配小彩灯效果。</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Phase 3: Character Showcase Gallery -->
-        <section>
-            <div class="section-title">
-                <h2>03. Artwork Showcase</h2>
-                <p>Explore all the themed series created from upcycled shuttlecocks.</p>
-            </div>
+    
+    <section>
+        <div class="section-title">
+            <h2>01. The Origin</h2>
+            <p>It all starts on the badminton court with every smash and rally.</p>
+        </div>
 
-            <div class="grid-4">
-                <!-- Marvel Superheroes -->
-                <div class="gallery-item">
-                    <img src="004.jpg" alt="Superhero Series">
-                    <div class="gallery-overlay">
-                        <h4>Superhero Alliance</h4>
-                        <p>Hulk, Captain America, Spider-Man, Iron Man & Batman</p>
-                    </div>
-                </div>
-
-                <!-- Minions Trio -->
-                <div class="gallery-item">
-                    <img src="021.jpg" alt="Minions Trio">
-                    <div class="gallery-overlay">
-                        <h4>Minion Crew</h4>
-                        <p>Three unique hand-painted Minion expressions</p>
-                    </div>
-                </div>
-
-                <!-- Winnie the Pooh -->
-                <div class="gallery-item">
-                    <img src="026.jpg" alt="Winnie the Pooh and Gradient Bases">
-                    <div class="gallery-overlay">
-                        <h4>Winnie the Pooh & Rainbow Bases</h4>
-                        <p>Yellow bear with red shirt alongside colorful wrapped bases</p>
-                    </div>
-                </div>
-
-                <!-- Doraemon Trio -->
-                <div class="gallery-item">
-                    <img src="003.jpg" alt="Doraemon Collection">
-                    <div class="gallery-overlay">
-                        <h4>Doraemon Series</h4>
-                        <p>Classic blue & light blue Doraemon figures</p>
-                    </div>
-                </div>
-
-                <!-- Panda Trio -->
-                <div class="gallery-item">
-                    <img src="017.jpg" alt="Giant Panda Series">
-                    <div class="gallery-overlay">
-                        <h4>Panda Family</h4>
-                        <p>Cute pandas with green bowties and pink cheeks</p>
-                    </div>
-                </div>
-
-                <!-- Panda Pair Close-Up -->
-                <div class="gallery-item">
-                    <img src="019.jpg" alt="Panda Pair">
-                    <div class="gallery-overlay">
-                        <h4>Panda Friends</h4>
-                        <p>Monochrome woven body with cute faces</p>
-                    </div>
-                </div>
-
-                <!-- Minions Pair -->
-                <div class="gallery-item">
-                    <img src="013.jpg" alt="Minions Pair">
-                    <div class="gallery-overlay">
-                        <h4>Minions Duo</h4>
-                        <p>Woven denim overalls and yellow tops</p>
-                    </div>
-                </div>
-
-                <!-- Colorful Tassels -->
-                <div class="gallery-item">
-                    <img src="010.jpg" alt="Colorful Tassel Ornaments">
-                    <div class="gallery-overlay">
-                        <h4>Colorful Tassel Dolls</h4>
-                        <p>Bright yellow, green, red, and purple threaded skirts</p>
-                    </div>
-                </div>
-
-                <!-- Feather Pendant -->
-                <div class="gallery-item">
-                    <img src="023.jpg" alt="Pastel Beaded Feather Pendant">
-                    <div class="gallery-overlay">
-                        <h4>Pastel Bead Skirt</h4>
-                        <p>Layered feather pendant with colorful beads</p>
-                    </div>
-                </div>
-
-                <!-- Shuttlecock Light -->
-                <div class="gallery-item">
-                    <img src="006.jpg" alt="Glowing Shuttlecock Light">
-                    <div class="gallery-overlay">
-                        <h4>Glowing Feather Lamp</h4>
-                        <p>LED illuminated shuttlecock ornament</p>
-                    </div>
-                </div>
-
-                <!-- Doraemon Pair -->
-                <div class="gallery-item">
-                    <img src="009.jpg" alt="Doraemon Close-up">
-                    <div class="gallery-overlay">
-                        <h4>Happy Doraemons</h4>
-                        <p>Playful expressions on cork heads</p>
-                    </div>
-                </div>
-
-                <!-- Master Cork Board -->
-                <div class="gallery-item">
-                    <img src="012.jpg" alt="Full Gallery View">
-                    <div class="gallery-overlay">
-                        <h4>Full Display Board</h4>
-                        <p>Collection of 20+ unique upcycled dolls</p>
-                    </div>
+        <div class="grid-3">
+            <div class="card">
+                <img src="022.jpg" alt="Smashing on Badminton Court">
+                <div class="card-body">
+                    <div class="card-tag">Court Action</div>
+                    <h3>Action on the Court</h3>
+                    <p>High-energy badminton rallies mean lots of worn-out shuttlecocks that would otherwise be thrown away.</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section>
-            <div class="contact-section">
-                <h2>Interested in Upcycling or Collaborating?</h2>
-                <p>If you love eco-friendly crafts, want to exchange DIY techniques, or share ideas on sports waste recycling, feel free to drop me a message!</p>
-                <a href="mailto:chemwenlue@icloud.com" class="contact-btn">
-                    <i class="fa-regular fa-paper-plane"></i> Send Me an Email
-                </a>
+            <div class="card">
+                <img src="024.jpg" alt="Playing Badminton">
+                <div class="card-body">
+                    <div class="card-tag">Passion & Energy</div>
+                    <h3>Every Match Counts</h3>
+                    <p>Playing badminton regularly provides a continuous supply of discarded shuttlecocks waiting for a new purpose.</p>
+                </div>
             </div>
-        </section>
 
-    </div>
+            <div class="card">
+                <img src="016.jpg" alt="Collection of Shuttlecocks">
+                <div class="card-body">
+                    <div class="card-tag">Recycling Inspiration</div>
+                    <h3>Collecting Used Materials</h3>
+                    <p>Gathering discarded shuttlecocks after games, sorting them for feather trimming and base repurposing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; Upcycled Shuttlecock Crafts Project. Designed with Passion & Recycled Materials.</p>
-    </footer>
+    
+    <section>
+        <div class="section-title">
+            <h2>02. The Crafting Process</h2>
+            <p>Step-by-step transformation using simple tools and pure creativity.</p>
+        </div>
 
-</body>
-</html>
+        <div class="grid-3">
+            <div class="card">
+                <img src="027.jpg" alt="Trimmed Feather Pieces">
+                <div class="card-body">
+                    <div class="card-tag">Step 1</div>
+                    <h3>Sorting Feather Pieces</h3>
+                    <p>Plucking damaged feathers and keeping intact tips for delicate crafts like light skirts and dresses.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="001.jpg" alt="Tools for Assembly">
+                <div class="card-body">
+                    <div class="card-tag">Step 2</div>
+                    <h3>Weaving & Binding</h3>
+                    <p>Using pliers and colorful nylon cords to tightly wrap the shuttlecock frame into smooth, vibrant skirts.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="025.jpg" alt="Gradient Wrapped Bases">
+                <div class="card-body">
+                    <div class="card-tag">Step 3</div>
+                    <h3>Rainbow Thread Wrapping</h3>
+                    <p>Wrapping bases with neon gradient threads to prepare for character painting or standalone ornaments.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="005.jpg" alt="Hand Painting">
+                <div class="card-body">
+                    <div class="card-tag">Step 4</div>
+                    <h3>Hand-Painting Facial Details</h3>
+                    <p>Using fine paint pens to detail superhero masks, cute eyes, and iconic expressions onto cork heads.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="023.jpg" alt="Beaded Feather Pendant">
+                <div class="card-body">
+                    <div class="card-tag">Step 5</div>
+                    <h3>Beaded Collar Assembly</h3>
+                    <p>Threading pastel beads around the upper neck to create elegant feather skirts for hanging pendants.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="006.jpg" alt="Glowing LED Shuttlecock">
+                <div class="card-body">
+                    <div class="card-tag">Step 6</div>
+                    <h3>Illuminating the Craft</h3>
+                    <p>Installing internal LED modules into feather structures to turn shuttlecocks into glowing night-light ornaments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="feature-card">
+            <img src="012.jpg" alt="Full Figurine Collection on Cork Board">
+            <div class="feature-info">
+                <h3>The Master Collection</h3>
+                <p>After hours of trimming, weaving, and painting, dozens of custom recycled characters come to life! From Marvel superheroes and Minions to Winnie the Pooh, Doraemon, pandas, and custom tassels—all displayed together on a cork board.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="section-title">
+            <h2>03. Artwork Showcase</h2>
+            <p>Explore all the themed series created from upcycled shuttlecocks.</p>
+        </div>
+
+        <div class="grid-4">
+            
+            <div class="gallery-item">
+                <img src="004.jpg" alt="Superhero Series">
+                <div class="gallery-overlay">
+                    <h4>Superhero Alliance</h4>
+                    <p>Hulk, Captain America, Spider-Man, Iron Man & Batman</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="021.jpg" alt="Minions Trio">
+                <div class="gallery-overlay">
+                    <h4>Minion Crew</h4>
+                    <p>Three unique hand-painted Minion expressions</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="026.jpg" alt="Winnie the Pooh and Gradient Bases">
+                <div class="gallery-overlay">
+                    <h4>Winnie the Pooh & Rainbow Bases</h4>
+                    <p>Yellow bear with red shirt alongside colorful wrapped bases</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="003.jpg" alt="Doraemon Collection">
+                <div class="gallery-overlay">
+                    <h4>Doraemon Series</h4>
+                    <p>Classic blue & light blue Doraemon figures</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="017.jpg" alt="Giant Panda Series">
+                <div class="gallery-overlay">
+                    <h4>Panda Family</h4>
+                    <p>Cute pandas with green bowties and pink cheeks</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="019.jpg" alt="Panda Pair">
+                <div class="gallery-overlay">
+                    <h4>Panda Friends</h4>
+                    <p>Monochrome woven body with cute faces</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="013.jpg" alt="Minions Pair">
+                <div class="gallery-overlay">
+                    <h4>Minions Duo</h4>
+                    <p>Woven denim overalls and yellow tops</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="010.jpg" alt="Colorful Tassel Ornaments">
+                <div class="gallery-overlay">
+                    <h4>Colorful Tassel Dolls</h4>
+                    <p>Bright yellow, green, red, and purple threaded skirts</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="023.jpg" alt="Pastel Beaded Feather Pendant">
+                <div class="gallery-overlay">
+                    <h4>Pastel Bead Skirt</h4>
+                    <p>Layered feather pendant with colorful beads</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="006.jpg" alt="Glowing Shuttlecock Light">
+                <div class="gallery-overlay">
+                    <h4>Glowing Feather Lamp</h4>
+                    <p>LED illuminated shuttlecock ornament</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="009.jpg" alt="Doraemon Close-up">
+                <div class="gallery-overlay">
+                    <h4>Happy Doraemons</h4>
+                    <p>Playful expressions on cork heads</p>
+                </div>
+            </div>
+
+            
+            <div class="gallery-item">
+                <img src="012.jpg" alt="Full Gallery View">
+                <div class="gallery-overlay">
+                    <h4>Full Display Board</h4>
+                    <p>Collection of 20+ unique upcycled dolls</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section>
+        <div class="contact-section">
+            <h2>Interested in Upcycling or Collaborating?</h2>
+            <p>If you love eco-friendly crafts, want to exchange DIY techniques, or share ideas on sports waste recycling, feel free to drop me a message!</p>
+            <a href="mailto:chemwenlue@icloud.com" class="contact-btn">
+                <i class="fa-regular fa-paper-plane"></i> Send Me an Email
+            </a>
+        </div>
+    </section>
+
+</div>
+
+
+<footer>
+    <p>© Upcycled Shuttlecock Crafts Project. Designed with Passion & Recycled Materials.</p>
+</footer>
