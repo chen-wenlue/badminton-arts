@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中秋特辑 · 羽毛球灯笼 | 羽毛球再生手作</title>
+<style>
+  :root{
+    --teal:#0d9488;
+    --teal-light:#ccfbf1;
+    --ink:#1e293b;
+    --muted:#64748b;
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --line:#e2e8f0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- nav ---------- */
+  header{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50;}
+  nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-weight:800;font-size:18px;color:var(--ink);text-decoration:none;}
+  .logo span{color:var(--teal);}
+  nav .right{display:flex;align-items:center;gap:28px;}
+  nav ul{display:flex;gap:28px;list-style:none;}
+  nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;}
+  nav a:hover{color:var(--teal);}
+  .lang-toggle{display:flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:#fff;}
+  .lang-toggle button{border:none;background:transparent;padding:6px 14px;font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s;}
+  .lang-toggle button.active{background:var(--teal);color:#fff;}
+  @media(max-width:720px){nav ul{display:none;}}
+
+  /* ---------- sections ---------- */
+  section{padding:72px 0;}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 48px;}
+  .sec-head .no{color:var(--teal);font-weight:800;font-size:15px;letter-spacing:2px;}
+  .sec-head h2{font-size:34px;font-weight:800;margin:6px 0 10px;letter-spacing:-.5px;}
+  .sec-head .bar{width:56px;height:4px;background:var(--teal);border-radius:2px;margin:14px auto;}
+  .sec-head p{color:var(--muted);font-size:15.5px;}
+  .back{display:inline-block;margin-bottom:36px;color:var(--teal);font-weight:700;text-decoration:none;font-size:14.5px;}
+  .back:hover{text-decoration:underline;}
+
+  /* ---------- step cards ---------- */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media(max-width:960px){.grid3{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:620px){.grid3{grid-template-columns:1fr;}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 18px rgba(15,23,42,.05);transition:transform .25s,box-shadow .25s;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(15,23,42,.10);}
+  .card .ph{aspect-ratio:4/3;overflow:hidden;background:#eef2f7;}
+  .card .ph img{width:100%;height:100%;object-fit:cover;}
+  .card .body{padding:20px 22px 24px;}
+  .step-no{color:var(--teal);font-size:12.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;}
+  .card h3{font-size:18.5px;font-weight:800;margin:6px 0 8px;}
+  .card p{color:var(--muted);font-size:14.5px;}
+
+  /* ---------- story blocks ---------- */
+  .story{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:8px;}
+  @media(max-width:720px){.story{grid-template-columns:1fr;}}
+  .story .card .ph{aspect-ratio:3/4;}
+  .note{margin-top:28px;background:var(--teal-light);border-left:4px solid var(--teal);border-radius:12px;padding:18px 22px;color:#0f766e;font-weight:600;font-size:15.5px;}
+
+  /* ---------- footer ---------- */
+  footer{background:#0f172a;color:#94a3b8;padding:44px 0;text-align:center;font-size:14px;}
+  footer .heart{color:var(--teal);font-weight:700;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="index.html" data-zh='羽毛球<span>再生</span>手作' data-en='Shuttlecock <span>Reborn</span>'>羽毛球<span>再生</span>手作</a>
+      <div class="right">
+        <ul>
+          <li><a href="index.html" data-zh="首页" data-en="Home">首页</a></li>
+          <li><a href="index.html#process" data-zh="制作过程" data-en="Process">制作过程</a></li>
+          <li><a href="index.html#specials" data-zh="作品特辑" data-en="Specials">作品特辑</a></li>
+          <li><a href="index.html#contact" data-zh="联系我" data-en="Contact">联系我</a></li>
+        </ul>
+        <div class="lang-toggle">
+          <button id="btn-zh" class="active" onclick="setLang('zh')">中文</button>
+          <button id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 中秋特辑 ============ -->
+<section id="lantern">
+  <div class="wrap">
+    <a class="back" href="index.html" data-zh="← 返回首页" data-en="← Back to Home">← 返回首页</a>
+    <div class="sec-head">
+      <div class="no" data-zh="特辑 · SPECIAL" data-en="SPECIAL">特辑 · SPECIAL</div>
+      <h2 data-zh='中秋特别作品 · 羽毛球灯笼' data-en='Mid-Autumn Special · Shuttlecock Lantern'>中秋特别作品 · 羽毛球灯笼</h2>
+      <div class="bar"></div>
+      <p data-zh="在中国，过中秋的时候，大家会把灯笼挂起来，寓意一家人平平安安、团团圆圆。<br>今天，我用废旧羽毛球的羽毛，也做一个灯笼。" data-en="In China, families hang lanterns at Mid-Autumn Festival to wish for safety and reunion. Today, I'm making a lantern out of feathers from used shuttlecocks.">在中国，过中秋的时候，大家会把灯笼挂起来，寓意一家人平平安安、团团圆圆。<br>今天，我用废旧羽毛球的羽毛，也做一个灯笼。</p>
+    </div>
+
+    <div class="grid3">
+      <div class="card">
+        <div class="ph"><img src="037.jpg" alt="收集废旧羽毛球"></div>
+        <div class="body">
+          <div class="step-no" data-zh="步骤 1 · 准备材料" data-en="Step 1 · Materials">步骤 1 · 准备材料</div>
+          <h3 data-zh="剪下羽毛" data-en="Snip the Feathers">剪下羽毛</h3>
+          <p data-zh="首先，我们要拿 3～4 个烂的羽毛球，把羽毛剪下来。" data-en="First, take 3–4 worn-out shuttlecocks and snip off their feathers.">首先，我们要拿 3～4 个烂的羽毛球，把羽毛剪下来。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="038.jpg" alt="把羽毛一圈圈粘在球头边缘"></div>
+        <div class="body">
+          <div class="step-no" data-zh="步骤 2 · 粘贴羽毛" data-en="Step 2 · Gluing">步骤 2 · 粘贴羽毛</div>
+          <h3 data-zh="一圈一圈粘羽毛" data-en="Glue in Circles">一圈一圈粘羽毛</h3>
+          <p data-zh="然后取一个羽毛球，将剪下的羽毛一圈一圈粘在羽毛球边缘。为了让灯笼看起来很饱满，我们需要粘 3～4 层以上。" data-en="Then take one shuttlecock and glue the cut feathers around its rim, circle by circle. For a full, plump lantern, glue at least 3–4 layers.">然后取一个羽毛球，将剪下的羽毛一圈一圈粘在羽毛球边缘。为了让灯笼看起来很饱满，我们需要粘 3～4 层以上。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ph"><img src="039.jpg" alt="放入小灯"></div>
+        <div class="body">
+          <div class="step-no" data-zh="步骤 3 · 放入小灯" data-en="Step 3 · Add the Light">步骤 3 · 放入小灯</div>
+          <h3 data-zh="装进小灯" data-en="Put in the Light">装进小灯</h3>
+          <p data-zh="最后我们把准备好的小灯放进去羽毛球内，用胶水固定好。" data-en="Finally, place the little light inside the shuttlecock and fix it in place with glue.">最后我们把准备好的小灯放进去羽毛球内，用胶水固定好。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="note" data-zh="🏮 这样一个漂亮的羽毛球灯笼就做好啦！点亮之后，羽毛会透出柔和的光。" data-en="🏮 And just like that, a beautiful shuttlecock lantern is done! Once lit, the feathers glow with a soft, gentle light.">🏮 这样一个漂亮的羽毛球灯笼就做好啦！点亮之后，羽毛会透出柔和的光。</div>
+
+    <div class="story" style="margin-top:24px;">
+      <div class="card"><div class="ph" style="aspect-ratio:4/3;"><img src="040.jpg" alt="点亮后的羽毛球灯笼"></div></div>
+      <div class="card"><div class="ph" style="aspect-ratio:4/3;"><img src="030.jpg" alt="羽毛球灯笼挂起效果"></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p data-zh='用<span class="heart">♥</span>和废旧羽毛球制作 · 环保手作 · 学校义卖' data-en='Made with <span class="heart">♥</span> and used shuttlecocks · Eco crafts · School charity sale'>用<span class="heart">♥</span>和废旧羽毛球制作 · 环保手作 · 学校义卖</p>
+    <p style="margin-top:10px;">📧 <a href="mailto:chemwenlue@icloud.com" style="color:#5eead4;text-decoration:none;">chemwenlue@icloud.com</a></p>
+  </div>
+</footer>
+
+<script>
+function setLang(lang){
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.querySelectorAll('[data-zh]').forEach(function(el){
+    var v = el.getAttribute('data-' + lang);
+    if(v !== null) el.innerHTML = v;
+  });
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  try{ localStorage.setItem('site-lang', lang); }catch(e){}
+}
+(function(){
+  var saved = null;
+  try{ saved = localStorage.getItem('site-lang'); }catch(e){}
+  if(saved === 'en' || saved === 'zh') setLang(saved);
+})();
+</script>
+
+</body>
+</html>
