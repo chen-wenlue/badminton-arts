@@ -4,233 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="data:,">
-<title>万圣节特辑 · 橙黑挂饰 | 羽毛球再生手作</title>
+<title>万圣节作品 | 羽毛球再生手作</title>
 <style>
-  :root{
-    --orange:#c2410c;
-    --orange-light:#ffedd5;
-    --ink:#292524;
-    --muted:#57534e;
-    --bg:#f5f5f4;
-    --paper:#fafaf9;
-    --line:#d6d3d1;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;}
-  img{display:block;max-width:100%;}
-  a,button{-webkit-tap-highlight-color:transparent;}
-  a:focus-visible,button:focus-visible{outline:3px solid #fb923c;outline-offset:4px;}
-  .wrap{width:min(1120px,100%);margin:0 auto;padding:0 24px;}
-
-  header{position:sticky;top:0;background:rgba(250,250,249,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:20;}
-  nav{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:16px;}
-  .logo{font-weight:800;font-size:18px;color:var(--ink);text-decoration:none;}
-  .logo span{color:var(--orange);}
-  nav .right{display:flex;align-items:center;gap:28px;}
-  nav ul{display:flex;gap:28px;list-style:none;}
-  nav ul a{display:inline-flex;align-items:center;min-height:44px;color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s;}
-  nav ul a:hover{color:var(--orange);}
-  .lang-toggle{display:flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:var(--paper);}
-  .lang-toggle button{border:none;background:transparent;min-width:48px;min-height:40px;padding:6px 12px;font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;transition:background-color .2s,color .2s;}
-  .lang-toggle button.active{background:var(--orange);color:#fff7ed;}
-  @media(max-width:720px){nav ul{display:none;}.logo{font-size:16px;}.wrap{padding:0 18px;}}
-
-  .hero{position:relative;min-height:calc(100dvh - 64px);display:flex;align-items:flex-end;isolation:isolate;overflow:hidden;background:#44403c;}
-  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,25,23,.04) 25%,rgba(28,25,23,.82) 100%);z-index:-1;}
-  .hero-content{width:min(1120px,100%);margin:0 auto;padding:96px 24px 64px;color:#fff7ed;}
-  .hero .kicker{font-size:13px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#fed7aa;}
-  .hero h1{max-width:760px;margin-top:14px;font-size:clamp(40px,6vw,76px);line-height:1.12;letter-spacing:-2px;}
-  .hero h1 span{color:#fb923c;}
-  .hero p{max-width:580px;margin-top:22px;font-size:17px;line-height:1.8;color:#fff7ed;}
-  @media(max-width:620px){.hero{min-height:76dvh;}.hero>img{object-position:52% center;}.hero-content{padding:72px 18px 36px;}.hero h1{letter-spacing:-1px;}.hero p{font-size:16px;}}
-
-  section{padding:88px 0;}
-  .back{display:inline-flex;align-items:center;min-height:44px;margin:24px 0 0;color:var(--orange);font-weight:700;text-decoration:none;font-size:14.5px;}
-  .back:hover{text-decoration:underline;text-underline-offset:4px;}
-  .section-head{max-width:660px;margin-bottom:40px;}
-  .section-head .no{color:var(--orange);font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;}
-  .section-head h2{margin:8px 0 14px;font-size:clamp(30px,4vw,44px);line-height:1.25;letter-spacing:-1px;}
-  .section-head p{color:var(--muted);font-size:16px;max-width:62ch;}
-  .photo{overflow:hidden;background:#e7e5e4;}
-  .photo img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease-out;}
-  .photo:hover img{transform:scale(1.025);}
-  figcaption{margin-top:12px;color:var(--muted);font-size:13px;}
-
-  .materials{background:var(--paper);}
-  .material-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:start;}
-  .material-grid .lead{margin:0;}
-  .material-grid .lead .photo{aspect-ratio:4/3;}
-  .material-side{padding-top:72px;}
-  .material-side .photo{aspect-ratio:4/3;}
-  .material-note{margin-top:32px;border-top:1px solid var(--line);padding-top:24px;}
-  .material-note strong{display:block;margin-bottom:8px;color:var(--orange);font-size:14px;letter-spacing:1px;}
-  .material-note p{color:var(--muted);font-size:15px;}
-
-  .craft-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:40px 24px;align-items:start;}
-  .work,.detail{min-width:0;}
-  .work{grid-column:span 6;}
-  .work .photo{aspect-ratio:4/3;}
-  .work h3{margin:22px 0 8px;font-size:25px;line-height:1.35;}
-  .work p{color:var(--muted);font-size:15.5px;max-width:52ch;}
-  .work .label{display:block;margin-top:20px;color:var(--orange);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;}
-  .detail{grid-column:span 6;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  .detail .photo{aspect-ratio:4/3;}
-  .detail .wide{grid-column:1/-1;}
-  .detail .wide .photo{aspect-ratio:16/9;}
-  .finale{margin-top:40px;}
-  .finale .photo{aspect-ratio:16/8;}
-  .finale .photo img{object-position:center 58%;}
-
-  .note{margin-top:48px;background:var(--orange-light);border-radius:14px;padding:24px 28px;color:#7c2d12;font-weight:600;font-size:16px;text-align:center;}
-  footer{background:#1c1917;color:#a8a29e;padding:44px 0;text-align:center;font-size:14px;}
-  footer .heart{color:#fb923c;font-weight:700;}
-  footer a{color:#fdba74;text-decoration:none;}
-  footer p+p{margin-top:10px;}
-  @media(max-width:760px){
-    section{padding:64px 0;}
-    .material-grid{grid-template-columns:1fr;gap:32px;}
-    .material-side{padding-top:0;}
-    .work,.detail{grid-column:1/-1;}
-    .craft-grid{grid-template-columns:minmax(0,1fr);gap:40px;}
-    .detail{gap:16px;}
-    .finale .photo{aspect-ratio:4/3;}
-  }
-  @media(max-width:480px){.detail{grid-template-columns:1fr;}.detail .wide{grid-column:auto;}.detail .wide .photo{aspect-ratio:4/3;}.note{padding:20px;}}
-  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.photo img{transition:none;}.photo:hover img{transform:none;}}
+:root{--orange:#c2410c;--orange-light:#ffedd5;--ink:#292524;--muted:#57534e;--bg:#f5f5f4;--paper:#fafaf9;--line:#d6d3d1}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75}img{display:block;max-width:100%}.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;background:rgba(250,250,249,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:20}nav{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:16px}.logo{font-weight:800;font-size:18px;color:var(--ink);text-decoration:none}.logo span{color:var(--orange)}nav .right{display:flex;align-items:center;gap:28px}nav ul{display:flex;gap:28px;list-style:none}nav ul a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}nav ul a:hover{color:var(--orange)}.lang-toggle{display:flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:var(--paper)}.lang-toggle button{border:none;background:transparent;padding:7px 14px;font-size:13px;font-weight:700;color:var(--muted);cursor:pointer}.lang-toggle button.active{background:var(--orange);color:#fff7ed}
+main{padding:48px 0 80px}.back{display:inline-block;margin-bottom:38px;color:var(--orange);font-weight:700;text-decoration:none;font-size:14.5px}.back:hover{text-decoration:underline}.intro{max-width:760px;margin:0 auto 48px;text-align:center}.kicker{color:var(--orange);font-size:13px;font-weight:800;letter-spacing:2px}.intro h1{margin:10px 0 18px;font-size:42px;line-height:1.25}.intro p{color:var(--muted);font-size:18px;line-height:1.9}.gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px}.photo{overflow:hidden;border-radius:18px;background:#e7e5e4;box-shadow:0 8px 24px rgba(41,37,36,.08)}.photo img{width:100%;height:100%;object-fit:cover;transition:transform .35s}.photo:hover img{transform:scale(1.015)}.photo:not(.wide){aspect-ratio:4/3}.photo.wide{grid-column:1/-1;aspect-ratio:4/3}
+footer{background:#1c1917;color:#a8a29e;padding:44px 0;text-align:center;font-size:14px}footer .heart{color:#fb923c}footer p+p{margin-top:10px}footer a{color:#fdba74;text-decoration:none}
+@media(max-width:720px){nav ul{display:none}.wrap{padding:0 18px}.intro h1{font-size:32px}.intro p{font-size:16px}.gallery{grid-template-columns:1fr;gap:16px}.photo.wide{grid-column:auto}.photo.wide,.photo:not(.wide){aspect-ratio:4/3}main{padding-top:32px}}
 </style>
 </head>
 <body>
-
-<header>
-  <div class="wrap">
-    <nav aria-label="主导航">
-      <a class="logo" href="index.html" data-zh='羽毛球<span>再生</span>手作' data-en='Shuttlecock <span>Reborn</span>'>羽毛球<span>再生</span>手作</a>
-      <div class="right">
-        <ul>
-          <li><a href="index.html" data-zh="首页" data-en="Home">首页</a></li>
-          <li><a href="index.html#process" data-zh="制作过程" data-en="Process">制作过程</a></li>
-          <li><a href="index.html#specials" data-zh="作品特辑" data-en="Specials">作品特辑</a></li>
-          <li><a href="index.html#contact" data-zh="联系我" data-en="Contact">联系我</a></li>
-        </ul>
-        <div class="lang-toggle" aria-label="语言切换">
-          <button id="btn-zh" class="active" onclick="setLang('zh')" aria-label="切换为中文">中文</button>
-          <button id="btn-en" onclick="setLang('en')" aria-label="Switch to English">EN</button>
-        </div>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero" aria-labelledby="halloween-title">
-    <img src="060.jpg" width="1700" height="1275" alt="黑色怪脸与橙色南瓜两款万圣节羽毛球挂饰" fetchpriority="high">
-    <div class="hero-content">
-      <div class="kicker" data-zh="特辑 03 · Halloween" data-en="Special 03 · Halloween">特辑 03 · Halloween</div>
-      <h1 id="halloween-title" data-zh='万圣节特辑<br><span>橙黑挂饰</span>' data-en='Halloween Special<br><span>Orange & Black</span>'>万圣节特辑<br><span>橙黑挂饰</span></h1>
-      <p data-zh="这个万圣节，我把打废的羽毛球变成了两位特别的小伙伴：一个画着南瓜笑脸，一个披上黑色外衣。旧材料，也能拥有古灵精怪的新模样。" data-en="This Halloween, two worn-out shuttlecocks became a smiling pumpkin and a little dark monster. Old materials can take on a playful new life.">这个万圣节，我把打废的羽毛球变成了两位特别的小伙伴：一个画着南瓜笑脸，一个披上黑色外衣。旧材料，也能拥有古灵精怪的新模样。</p>
-    </div>
-  </section>
-
-  <div class="wrap">
-    <a class="back" href="index.html#specials" data-zh="← 返回作品特辑" data-en="← Back to Special Collections">← 返回作品特辑</a>
-  </div>
-
-  <section class="materials" aria-labelledby="materials-title">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="no" data-zh="01 · 从旧材料开始" data-en="01 · Starting with Old Materials">01 · 从旧材料开始</div>
-        <h2 id="materials-title" data-zh="球场上的剩余，手作里的主角" data-en="Leftovers from the Court, Stars of the Craft">球场上的剩余，手作里的主角</h2>
-        <p data-zh="把打废的羽毛球收集起来，清理并挑选可以继续使用的球头与球架。它们原本散落在球场边，如今将成为节日挂饰的起点。" data-en="Used shuttlecocks are collected, cleaned, and sorted. Once scattered beside the court, their sturdy bases now become the starting point for festive pendants.">把打废的羽毛球收集起来，清理并挑选可以继续使用的球头与球架。它们原本散落在球场边，如今将成为节日挂饰的起点。</p>
-      </div>
-      <div class="material-grid">
-        <figure class="lead">
-          <div class="photo"><img src="061.jpg" width="1700" height="1275" loading="lazy" alt="收集并整齐摆放的废旧羽毛球"></div>
-          <figcaption data-zh="收集废旧羽毛球，为每一次再生做好准备。" data-en="A collection of used shuttlecocks, ready for a new beginning.">收集废旧羽毛球，为每一次再生做好准备。</figcaption>
-        </figure>
-        <div class="material-side">
-          <figure>
-            <div class="photo"><img src="062.jpg" width="1700" height="1275" loading="lazy" alt="去除羽毛后留下的羽毛球球头与球架"></div>
-            <figcaption data-zh="去除破损羽毛，留下可以继续创作的球头与球架。" data-en="Damaged feathers are removed, leaving the bases ready for making.">去除破损羽毛，留下可以继续创作的球头与球架。</figcaption>
-          </figure>
-          <div class="material-note">
-            <strong data-zh="这次的主角：橙色、黑色与一点想象力" data-en="This time: orange, black, and imagination">这次的主角：橙色、黑色与一点想象力</strong>
-            <p data-zh="保留羽毛球特有的小裙摆轮廓，再用彩线缠绕和手绘表情，做出一眼就能认出的万圣节气氛。" data-en="The shuttlecock's skirt-like shape stays, while wrapped thread and hand-painted faces bring out the Halloween spirit.">保留羽毛球特有的小裙摆轮廓，再用彩线缠绕和手绘表情，做出一眼就能认出的万圣节气氛。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section aria-labelledby="works-title">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="no" data-zh="02 · 节日变身" data-en="02 · The Halloween Transformation">02 · 节日变身</div>
-        <h2 id="works-title" data-zh="一只南瓜，一只暗夜小怪" data-en="One Pumpkin, One Little Dark Monster">一只南瓜，一只暗夜小怪</h2>
-        <p data-zh="橙色与黑色交错缠绕，让两只挂饰拥有统一的主题；不同的线条和表情，又让它们各自保留小小的个性。" data-en="Orange and black thread ties the pair together, while different details and expressions give each pendant its own personality.">橙色与黑色交错缠绕，让两只挂饰拥有统一的主题；不同的线条和表情，又让它们各自保留小小的个性。</p>
-      </div>
-
-      <div class="craft-grid">
-        <article class="work">
-          <div class="photo"><img src="063.jpg" width="1700" height="1275" loading="lazy" alt="橙色南瓜笑脸羽毛球挂饰正面"></div>
-          <span class="label" data-zh="作品 A · 南瓜挂饰" data-en="Piece A · Pumpkin Pendant">作品 A · 南瓜挂饰</span>
-          <h3 data-zh="咧嘴一笑，南瓜登场" data-en="A Grinning Little Pumpkin">咧嘴一笑，南瓜登场</h3>
-          <p data-zh="橙色铺出南瓜的底色，黑色画出三角眼睛和锯齿笑脸。橙黑相间的线绳层层缠绕，底部的一圈交叉纹理像精心编好的花边。" data-en="Orange sets the pumpkin's base, with triangular eyes and a jagged smile in black. Alternating threads build the body, finished with a woven-looking border.">橙色铺出南瓜的底色，黑色画出三角眼睛和锯齿笑脸。橙黑相间的线绳层层缠绕，底部的一圈交叉纹理像精心编好的花边。</p>
-        </article>
-
-        <article class="work">
-          <div class="photo"><img src="065.jpg" width="1700" height="1275" loading="lazy" alt="黑色暗夜小怪羽毛球挂饰正面"></div>
-          <span class="label" data-zh="作品 B · 暗夜小怪" data-en="Piece B · Little Dark Monster">作品 B · 暗夜小怪</span>
-          <h3 data-zh="黑白眼睛，古灵精怪" data-en="A Curious Little Dark Monster">黑白眼睛，古灵精怪</h3>
-          <p data-zh="黑色线绳包覆球架，只在顶部留出一圈白色。圆圆的黑色眼睛和头顶的小表情，让这只暗夜小怪看起来有一点神秘，也有一点可爱。" data-en="Black thread wraps the body, with a single white band near the top. Round eyes and a tiny expression make this little monster mysterious and charming.">黑色线绳包覆球架，只在顶部留出一圈白色。圆圆的黑色眼睛和头顶的小表情，让这只暗夜小怪看起来有一点神秘，也有一点可爱。</p>
-        </article>
-
-        <div class="detail" aria-label="作品背面与细节">
-          <figure>
-            <div class="photo"><img src="064.jpg" width="1700" height="1275" loading="lazy" alt="南瓜挂饰背面与橙色挂绳"></div>
-            <figcaption data-zh="南瓜挂饰背面：橙色挂绳与层叠纹理。" data-en="Pumpkin back: an orange loop and layered texture.">南瓜挂饰背面：橙色挂绳与层叠纹理。</figcaption>
-          </figure>
-          <figure>
-            <div class="photo"><img src="066.jpg" width="1700" height="1275" loading="lazy" alt="暗夜小怪背面与黑色挂绳"></div>
-            <figcaption data-zh="暗夜小怪背面：棕黑配色与细密缠绕。" data-en="Monster back: dark brown and tightly wrapped thread.">暗夜小怪背面：棕黑配色与细密缠绕。</figcaption>
-          </figure>
-          <figure class="wide">
-            <div class="photo"><img src="067.jpg" width="1440" height="1080" loading="lazy" alt="暗夜小怪挂饰的正面近景"></div>
-            <figcaption data-zh="换一个角度，看看手绘表情与线绳细节。" data-en="Another angle on the hand-painted face and wrapped thread.">换一个角度，看看手绘表情与线绳细节。</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="note" data-zh="🎃 不需要买到全新的材料，也能做出独一无二的节日装饰。这两只羽毛球挂饰，就是这个万圣节的小小惊喜。" data-en="🎃 Festive decorations do not have to start with brand-new materials. These two shuttlecock pendants are a small Halloween surprise with a life of their own.">🎃 不需要买到全新的材料，也能做出独一无二的节日装饰。这两只羽毛球挂饰，就是这个万圣节的小小惊喜。</div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <p data-zh='用<span class="heart">♥</span>和废旧羽毛球制作 · 环保手作 · 学校义卖' data-en='Made with <span class="heart">♥</span> and used shuttlecocks · Eco crafts · School charity sale'>用<span class="heart">♥</span>和废旧羽毛球制作 · 环保手作 · 学校义卖</p>
-    <p>📧 <a href="mailto:chemwenlue@icloud.com">chemwenlue@icloud.com</a></p>
-  </div>
-</footer>
-
+<header><div class="wrap"><nav>
+<a class="logo" href="index.html" data-zh='羽毛球<span>再生</span>手作' data-en='Shuttlecock <span>Reborn</span>'>羽毛球<span>再生</span>手作</a>
+<div class="right"><ul>
+<li><a href="index.html#origin" data-zh="起源" data-en="Origin">起源</a></li>
+<li><a href="index.html#process" data-zh="制作过程" data-en="Process">制作过程</a></li>
+<li><a href="charity.html" data-zh="公益活动" data-en="Charity">公益活动</a></li>
+<li><a href="index.html#specials" data-zh="作品特辑" data-en="Specials">作品特辑</a></li>
+<li><a href="index.html#contact" data-zh="联系我" data-en="Contact">联系我</a></li>
+</ul><div class="lang-toggle"><button id="btn-zh" class="active" onclick="setLang('zh')">中文</button><button id="btn-en" onclick="setLang('en')">EN</button></div></div>
+</nav></div></header>
+<main><div class="wrap">
+<a class="back" href="index.html#specials" data-zh="← 返回作品特辑" data-en="← Back to Special Collections">← 返回作品特辑</a>
+<div class="intro"><div class="kicker" data-zh="作品特辑 · HALLOWEEN" data-en="SPECIAL COLLECTION · HALLOWEEN">作品特辑 · HALLOWEEN</div><h1 data-zh="万圣节作品" data-en="Halloween Creations">万圣节作品</h1><p data-zh="万圣节到了，这次我设计了南瓜款和鬼怪款的羽毛球，大家喜欢吗？" data-en="Halloween is here! This time, I designed pumpkin and ghost shuttlecocks. Do you like them?">万圣节到了，这次我设计了南瓜款和鬼怪款的羽毛球，大家喜欢吗？</p></div>
+<div class="gallery">
+<div class="photo"><img src="halloween-1.jpg" alt="南瓜款羽毛球挂饰正面"></div>
+<div class="photo"><img src="halloween-2.jpg" alt="南瓜款羽毛球挂饰背面"></div>
+<div class="photo"><img src="halloween-3.jpg" alt="鬼怪款羽毛球挂饰正面"></div>
+<div class="photo"><img src="halloween-4.jpg" alt="鬼怪款羽毛球挂饰背面"></div>
+<div class="photo wide"><img src="halloween-5.jpg" alt="南瓜款和鬼怪款羽毛球挂饰合影"></div>
+</div>
+</div></main>
+<footer><div class="wrap"><p data-zh='用<span class="heart">♥</span>和废旧羽毛球制作 · 环保手作 · 学校义卖' data-en='Made with <span class="heart">♥</span> and used shuttlecocks · Eco crafts · School charity sale'>用<span class="heart">♥</span>和废旧羽毛球制作 · 环保手作 · 学校义卖</p><p>📧 <a href="mailto:chemwenlue@icloud.com">chemwenlue@icloud.com</a></p></div></footer>
 <script>
-function setLang(lang){
-  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-  document.querySelectorAll('[data-zh]').forEach(function(el){
-    var v = el.getAttribute('data-' + lang);
-    if(v !== null) el.innerHTML = v;
-  });
-  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  try{ localStorage.setItem('site-lang', lang); }catch(e){}
-}
-(function(){
-  var saved = null;
-  try{ saved = localStorage.getItem('site-lang'); }catch(e){}
-  if(saved === 'en' || saved === 'zh') setLang(saved);
-})();
+function setLang(lang){document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.querySelectorAll('[data-zh]').forEach(function(el){var v=el.getAttribute('data-'+lang);if(v!==null)el.innerHTML=v});document.getElementById('btn-zh').classList.toggle('active',lang==='zh');document.getElementById('btn-en').classList.toggle('active',lang==='en');try{localStorage.setItem('site-lang',lang)}catch(e){}}
+(function(){var saved=null;try{saved=localStorage.getItem('site-lang')}catch(e){}if(saved==='en'||saved==='zh')setLang(saved)})();
 </script>
-
-</body>
-</html>
+</body></html>
