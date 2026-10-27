@@ -103,6 +103,21 @@
   .card.soon .ph{display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,#f1f5f9,#f1f5f9 12px,#e8edf3 12px,#e8edf3 24px);}
   .card.soon .ph span{font-size:64px;filter:grayscale(.4);opacity:.8;}
 
+
+  /* ---------- charity entry ---------- */
+  .charity-entry{padding-top:0;}
+  .charity-banner{display:grid;grid-template-columns:1.05fr 1fr;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 8px 24px rgba(15,23,42,.06);transition:transform .25s,box-shadow .25s;}
+  .charity-banner:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(15,23,42,.12);}
+  .charity-banner .txt{padding:40px;display:flex;flex-direction:column;justify-content:center;}
+  .charity-banner .tag{color:var(--teal);font-size:13px;font-weight:800;letter-spacing:2px;}
+  .charity-banner h2{font-size:30px;margin:8px 0 12px;}
+  .charity-banner p{color:var(--muted);font-size:16px;}
+  .charity-banner .go{color:var(--teal);font-size:14px;font-weight:700;margin-top:20px;}
+  .charity-banner .ph{min-height:280px;overflow:hidden;}
+  .charity-banner .ph img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+  .charity-banner:hover .ph img{transform:scale(1.025);}
+  @media(max-width:720px){.charity-banner{grid-template-columns:1fr;}.charity-banner .txt{padding:28px;}.charity-banner .ph{min-height:0;aspect-ratio:4/3;}}
+
   /* ---------- footer ---------- */
   footer{background:#0f172a;color:#94a3b8;padding:44px 0;text-align:center;font-size:14px;}
   footer .heart{color:var(--teal);font-weight:700;}
@@ -118,6 +133,7 @@
         <ul>
           <li><a href="#origin" data-zh="起源" data-en="Origin">起源</a></li>
           <li><a href="#process" data-zh="制作过程" data-en="Process">制作过程</a></li>
+          <li><a href="charity.html" data-zh="公益活动" data-en="Charity">公益活动</a></li>
           <li><a href="#specials" data-zh="作品特辑" data-en="Specials">作品特辑</a></li>
           <li><a href="#contact" data-zh="联系我" data-en="Contact">联系我</a></li>
         </ul>
@@ -286,11 +302,31 @@
   </div>
 </section>
 
-<!-- ============ 03 作品特辑 ============ -->
-<section id="specials">
+<!-- ============ 03 公益活动 ============ -->
+<section class="charity-entry" id="charity">
   <div class="wrap">
     <div class="sec-head">
       <div class="no">03</div>
+      <h2 data-zh="公益活动" data-en="Charity Activities">公益活动</h2>
+      <div class="bar"></div>
+    </div>
+    <a class="charity-banner" href="charity.html" aria-label="查看羽毛球公益活动">
+      <div class="txt">
+        <div class="tag" data-zh="公益活动 · BADMINTON FOR GOOD" data-en="CHARITY · BADMINTON FOR GOOD">公益活动 · BADMINTON FOR GOOD</div>
+        <h2 data-zh="一次约定，一场公益之行" data-en="A Promise, a Charity Visit">一次约定，一场公益之行</h2>
+        <p data-zh="把羽毛球带到孩子们身边，愿他们像被梦想击出的羽毛球，高一点、远一点，去往山外的世界。" data-en="Bringing badminton to the children, with a wish that they fly higher and farther—toward the world beyond the mountains.">把羽毛球带到孩子们身边，愿他们像被梦想击出的羽毛球，高一点、远一点，去往山外的世界。</p>
+        <span class="go" data-zh="了解这次公益活动 →" data-en="Explore the Charity Visit →">了解这次公益活动 →</span>
+      </div>
+      <div class="ph"><img src="charity-assets/activity-1.jpg" alt="在校园里教孩子们打羽毛球"></div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ 04 作品特辑 ============ -->
+<section id="specials">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="no">04</div>
       <h2 data-zh='作品特辑' data-en='Special Collections'>作品特辑</h2>
       <div class="bar"></div>
       <p data-zh="每一个特辑，都是一段特别的故事。点进去看看吧！" data-en="Every special is a story of its own. Click in and take a look!">每一个特辑，都是一段特别的故事。点进去看看吧！</p>
@@ -338,7 +374,7 @@
 <section id="contact" style="background:#fff;">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:32px;">
-      <div class="no">04</div>
+      <div class="no">05</div>
       <h2 data-zh='联系我' data-en='Contact Me'>联系我</h2>
       <div class="bar"></div>
       <p data-zh="喜欢我的作品，或者想聊聊羽毛球手作？欢迎给我发邮件！" data-en="Like my works, or want to chat about shuttlecock crafts? Feel free to email me!">喜欢我的作品，或者想聊聊羽毛球手作？欢迎给我发邮件！</p>
